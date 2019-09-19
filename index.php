@@ -1,6 +1,7 @@
 <?php include('FonctionsCompteur.php'); ?>
 <?php include('FonctionsMini.php'); ?>
 <?php include('FonctionSomme.php'); ?>
+<?php include('FonctionsPuissance.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +15,15 @@
     <?php $compteur = array(1,4,3,3,4,2,2,2,4,1) ?>
 
     <table border="solid 1px black" cellspacing="0">
-            <tr>
-            <?php for ($i = 0; $i < 10; $i++)
-            {
-            ?>
-                <td><?php echo $compteur[$i]; ?></td>
-            <?php
-            }
-            ?>
-            </tr>
+        <tr>
+        <?php for ($i = 0; $i < 10; $i++)
+        {
+        ?>
+            <td><?php echo $compteur[$i]; ?></td>
+        <?php
+        }
+        ?>
+        </tr>
         </table>
     <?php echo elementTableaux($compteur); ?>
     <?php $mini = array(53,56,1,130,45,58); ?>
@@ -57,7 +58,10 @@
         </tr>
     </table>
 
-    <?php echo somme($somme) ?>
+    <?php echo somme($somme); ?>
+    <?php echo puissance(5,3); ?>
+    
+    
 
     
 </body>
