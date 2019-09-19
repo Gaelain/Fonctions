@@ -7,6 +7,6 @@ function somme($tab)
 
          $somme += $x;
     }
-    return $somme;
+    return "La somme des valeurs du tableau est ".$somme."<br>";
 }
 ?>

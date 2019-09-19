@@ -1,5 +1,6 @@
 <?php include('FonctionsCompteur.php'); ?>
 <?php include('FonctionsMini.php'); ?>
+<?php include('FonctionSomme.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +24,7 @@
             ?>
             </tr>
         </table>
-    <p>
-        <?php echo elementTableaux($compteur); ?>
-    </p>
+    <?php echo elementTableaux($compteur); ?>
     <?php $mini = array(53,56,1,130,45,58); ?>
 
     <table border="solid 1px black" cellspacing="0">
@@ -42,6 +41,23 @@
         </tr>
     </table>
     <?php echo mini($mini) ?>
+
+    <?php $somme = array(5,78,23,13,12,58); ?>
+    <table border="solid 1px black" cellspacing="0">
+        <tr>
+        <?php for ($i = 0; $i < 6; $i++)
+        {
+        ?>
+        <td>
+            <?php echo $somme[$i]; ?>
+        </td>
+        <?php
+        }
+        ?>
+        </tr>
+    </table>
+
+    <?php echo somme($somme) ?>
 
     
 </body>
