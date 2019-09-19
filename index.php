@@ -1,4 +1,6 @@
 <?php include('FonctionsCompteur.php'); ?>
+<?php include('FonctionsMini.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +10,39 @@
     <title>Document</title>
 </head>
 <body>
-    <?php $array = array(1,4,3,3,4,2,2,2,4,1) ?>
+    <?php $compteur = array(1,4,3,3,4,2,2,2,4,1) ?>
 
     <table border="solid 1px black" cellspacing="0">
             <tr>
             <?php for ($i = 0; $i < 10; $i++)
             {
             ?>
-                <td><?php echo $array[$i]; ?></td>
+                <td><?php echo $compteur[$i]; ?></td>
             <?php
             }
             ?>
             </tr>
         </table>
     <p>
-        <?php echo elementTableaux($array); ?>
+        <?php echo elementTableaux($compteur); ?>
     </p>
+    <?php $mini = array(53,56,1,130,45,58); ?>
+
+    <table border="solid 1px black" cellspacing="0">
+        <tr>
+        <?php for ($i = 0; $i < 6; $i++)
+        {
+        ?>
+        <td>
+            <?php echo $mini[$i]; ?>
+        </td>
+        <?php
+        }
+        ?>
+        </tr>
+    </table>
+    <?php echo mini($mini) ?>
+
     
 </body>
 </html>
